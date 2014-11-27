@@ -1,0 +1,22 @@
+{
+    "name": "melodia/util-bundle",
+    "description": "A collection of useful utilities, e.g. commands, data transformers etc.",
+    "license": "MIT",
+    "keywords": ["util", "command", "cli"],
+    "homepage": "http://github.com/melodia/MelodiaUtilBundle",
+    "authors": [
+        {
+            "name": "Alexey Ryzhkov",
+            "email": "alioch@yandex.ru"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-0": {
+            "Melodia\\UtilBundle": ""
+        }
+    },
+    "target-dir": "Melodia/UtilBundle"
+}
+
