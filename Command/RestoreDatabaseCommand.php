@@ -29,6 +29,7 @@ class RestoreDatabaseCommand extends ContainerAwareCommand
         $app->run(new ArrayInput(array(
                 'command' => 'doctrine:schema:drop',
                 '--force' => true,
+                '--full-database' => true,
             )),
             $output
         );
@@ -58,6 +59,13 @@ class RestoreDatabaseCommand extends ContainerAwareCommand
 
         $app->run(new ArrayInput(array(
                 'command' => 'doctrine:fixtures:load',
+                '--no-interaction' => null,
+            )),
+            $output
+        );
+        
+        $app->run(new ArrayInput(array(
+                'command' => 'doctrine:migrations:migrate',
                 '--no-interaction' => null,
             )),
             $output
